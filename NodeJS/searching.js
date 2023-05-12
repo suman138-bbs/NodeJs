@@ -7,12 +7,12 @@ function linearSearch(arr, x) {
     return NaN;
 }
 
-function binarySearch() {
+export default function binarySearch() {
     
 }
+console.log("Inside Searching")
 
-module.exports = {
-    linear: linearSearch,
-    binary:binarySearch
+export  {
+     linearSearch
     
 }

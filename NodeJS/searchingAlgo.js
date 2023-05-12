@@ -1,2 +1,3 @@
 import searching from "./searching.js";
-console.log(searching)
+import { linearSearch } from "./searching.js";
+console.log(linearSearch)
