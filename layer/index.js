@@ -7,7 +7,18 @@ const PORT = 3001
 app.use(bodyParser.json())
 let blogsList = []
 
-app.get('/blogs', (req, res) => {
+function logger(req, res, next) {
+    console.log(req.url)
+    console.log(req.body)
+    next()
+}
+
+function isAuthenticated(req, res, next){
+    console.log("Yes user is authticate")
+    next()
+}
+
+app.get('/blogs',logger,isAuthenticated, (req, res) => {
     res.status(200).json({
         data: blogsList,
         success:true,
